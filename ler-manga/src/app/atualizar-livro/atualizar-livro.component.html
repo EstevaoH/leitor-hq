@@ -1,0 +1,42 @@
+<form #formulario="ngForm">
+    <div class="form-row">
+        <div class="form-group col-md-3">
+            <label for="nome">Nome</label>
+            <input type="text" class="form-control" id="nome" name="nome" [(ngModel)]="obra.nome" required text>
+        </div>
+        <div class="form-group col-md-3">
+            <label for="autor">Autor</label>
+            <input type="number" class="form-control" id="autor" name="autor" [(ngModel)]="obra.codAutor">
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="form-group col-md-3">
+            <label for="isbn">ISBN</label>
+            <input type="number" class="form-control" id="isbn" name="isbm" [(ngModel)]="obra.isbn" required number>
+        </div>
+        <div class="form-group col-md-3">
+            <label for="dtlancamento">Data de Lancamento</label>
+            <input type="text" class="form-control" id="dtlancamento" name="dtlancamento" placeholder="AAAA/MM/DD"
+                [(ngModel)]="obra.dtlancamento" required text>
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="form-group col-md-3">
+            <label for="editora">Editora</label>
+            <input type="text" class="form-control" id="editora" name="editora" [(ngModel)]="obra.editora" required
+                text>
+        </div>
+        <div class="form-group col-md-3">
+            <label for="genero">Genero</label>
+            <input type="text" class="form-control" id="genero" name="genero" [(ngModel)]="obra.genero" required text>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="sinopse">Sinopse</label>
+        <textarea type="text" class="form-control" id="sinopse" rows="3" #si=ngModel name="sinopse"
+            [(ngModel)]="obra.sinopse" required text></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary" (click)="atualizarObra()" [disabled]='formulario.form.invalid'>Cadastra</button>
+</form>

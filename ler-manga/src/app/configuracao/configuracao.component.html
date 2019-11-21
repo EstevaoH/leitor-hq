@@ -1,0 +1,57 @@
+<div class="container">
+<details>
+    <summary>Excluir Livro</summary>
+    <div>
+        <form class="form-inline">
+            <div class="form-group">
+                <label for="codObra">Digite o ID do Obra que você deseja EXCLUIR</label>
+                <input type="number" id="codObra" class="form-control mx-sm-3" name="codObra" [(ngModel)]="obra.codObra">
+            </div>
+            <button type="submit" class="btn btn-danger" (click)="apagaObras(codObra)">Excluir</button>
+        </form>
+    </div>
+</details>
+
+<details>
+    <summary>Atualizar Livro</summary>
+    <div>
+        <form class="form-inline">
+            <div class="form-group">
+                <label for="codObra">Digite o ID do Obra que você deseja Atualizar</label>
+                <input type="number" id="codObra" class="form-control mx-sm-3" name="codObra" [(ngModel)]="obra.codObra">
+            </div>
+            <button type="submit" class="btn btn-primary my-1" (click)="atualizarObra(obra.codObra)">Enviar</button>
+        </form>
+    </div>
+</details> <br>
+
+
+<details>
+    <summary>Atualizar Autor</summary>
+    <div>
+        <form class="form-inline">
+            <div class="form-group">
+                <label for="">Digite o ID do Autor que você deseja atualizar: </label>
+                <input type="number" id="codAutor" name="codAutor" class="form-control mx-sm-3"
+                    [(ngModel)]="autor.codAutor">
+            </div>
+            <button type="submit" class="btn btn-primary my-1"
+                (click)="atualizarAutor(autor.codAutor)">Atualizar</button>
+        </form>
+    </div>
+</details>
+<details>
+    <summary>Excluir Autor</summary>
+    <div>
+        <form class="form-inline">
+            <div class="form-group">
+                <label for="codAutor">Digite o ID do Autor que você deseja EXCLUIR</label>
+                <input type="number" id="codAutor" name="codAutor" class="form-control mx-sm-3"
+                    [(ngModel)]="autor.codAutor">
+            </div>
+            <button type="submit" class="btn btn-danger" (click)=" apagaAutor(codAutor)">Excluir</button>
+            <div>{{mensagem}}</div>
+        </form>
+    </div>
+</details>
+</div>

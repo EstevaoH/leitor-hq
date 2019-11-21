@@ -1,0 +1,19 @@
+<div id="sidebar" role=complementary class="container">
+    <aside>
+        <h3 class="sb-title">Categorias</h3>
+        <ul class="sb-left" *ngFor="let c of categoria">
+            <li> <a value='c.nome' routerLink='/genero'>{{c.nome}}</a></li>
+        </ul>
+    </aside>
+</div>
+
+<h3> Todos os Mangas</h3>
+<div  *ngFor="let m of manga">
+    <div>
+        <ul class="lista-mangas">
+            <img src="../../assets/{{m.nome}}.jpg" alt="" width="160px" height="272px">
+            <li class="nome">{{m.nome}}</li>
+            <button type="button" class="btn btn-primary" (click)="capitulos()">Ler Online</button>
+        </ul>
+    </div>
+</div>
